@@ -11,3 +11,4 @@ components:
   - ./BOSH
   - ./DEA 
   - ./UAA
+  - ./Loggregator
