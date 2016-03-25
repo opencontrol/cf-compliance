@@ -1,0 +1,13 @@
+schema_version: "1.0.0"
+name: Cloud Foundry
+metadata:
+  description: Cloud Foundry Platform
+  maintainers:
+    - gabriel.ramirez@gsa.gov
+components:
+  - ./ApplicationSecurityGroups
+  - ./CloudController
+  - ./Warden
+  - ./BOSH
+  - ./DEA 
+  - ./UAA
