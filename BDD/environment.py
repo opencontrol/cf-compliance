@@ -1,6 +1,4 @@
 import config
-import sys
-sys.path.append('../')
 
 from cloudfoundry import Client
 from tagger import tag_component
