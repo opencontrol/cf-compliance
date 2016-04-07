@@ -1,8 +1,5 @@
 import config
 
-import requests
-import time
- 
 from behave import given, when, then
 
 from cloudfoundry import Client
