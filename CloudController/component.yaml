@@ -126,3 +126,43 @@ verifications:
   name: Cloud Controller Role Documentation
   path: https://ocs.cloudfoundry.org/concepts/roles.html
   type: URL
+- description: 'GIVEN I am using a space auditor account WHEN I view my audit logs
+    THEN I find "27" events '
+  key: Audit_Log_Tests
+  last_run: 2016-04-08 14:18:40.782585
+  name: Viewing Audits -- @1.6 Action-Results for auditing
+  path: BDD/CloudController.feature
+  test_passed: true
+  type: TEST
+- description: 'GIVEN I am using an admin account WHEN I look at the audit logs THEN
+    audit logs have timestamp THEN audit logs have type of event THEN audit logs have
+    actor THEN audit logs have actee '
+  key: Log_Content_Test
+  last_run: 2016-04-08 14:18:40.869894
+  name: Logs have timestamp, types of event, actor, and actee
+  path: BDD/CloudController.feature
+  test_passed: true
+  type: TEST
+- description: "GIVEN I am using <account> account WHEN I try to create an org THEN\
+    \ the org <status> \nGIVEN I am using <account> account WHEN I try to update an\
+    \ org name THEN the org name <status> \nGIVEN I am using <account> account WHEN\
+    \ I try to delete an org THEN the org <status> \nGIVEN I am using <account> account\
+    \ WHEN I try to create a space THEN the space <status> \nGIVEN I am using <account>\
+    \ account WHEN I try to update a space name THEN the space name <status> \nGIVEN\
+    \ I am using <account> account WHEN I try to delete a space THEN the space <status>\
+    \ \nGIVEN I am using <account> account WHEN I try to create an app THEN the app\
+    \ <status> \nGIVEN I am using <account> account WHEN I try to delete an app THEN\
+    \ the app <status> \nGIVEN I am using <account> account WHEN I try to create a\
+    \ user THEN the user <status> \nGIVEN I am using <account> account WHEN I try\
+    \ to give a user access to a \"<workspace>\" THEN the user <status> \nGIVEN I\
+    \ am using <account> account WHEN I try to delete a user THEN the user <status>\
+    \ \nGIVEN I am using <account> account WHEN I view my audit logs THEN I find \"\
+    <number>\" events \nGIVEN I am using an admin account WHEN I look at the audit\
+    \ logs THEN audit logs have timestamp THEN audit logs have type of event THEN\
+    \ audit logs have actor THEN audit logs have actee \n"
+  key: User_Role_Tests
+  last_run: 2016-04-08 14:18:41.973438
+  name: Cloud Controller Features
+  path: BDD/CloudController.feature
+  test_passed: true
+  type: TEST
