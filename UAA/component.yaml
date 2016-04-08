@@ -311,3 +311,12 @@ verifications:
   name: Cloud.gov Login Page
   path: https://login.cloud.gov/login
   type: URL
+- description: "GIVEN I am a user that can login WHEN I attempt to login 3 times and\
+    \ fail THEN I am not locked out \nGIVEN I am a user that can login WHEN I attempt\
+    \ to login 6 times and fail THEN I am locked out \n"
+  key: Account_Lockout_Tests
+  last_run: 2016-04-08 14:18:44.795280
+  name: CloudFoundry User Account and Authentication (UAA) Server Features
+  path: BDD/UAA.feature
+  test_passed: true
+  type: TEST

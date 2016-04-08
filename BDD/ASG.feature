@@ -1,4 +1,4 @@
-@Component-Security_Group_Tests-CloudFoundry-ApplicationSecurityGroups
+@Verify-Security_Group_Tests-ApplicationSecurityGroups
 Feature: Application Security Groups
 
   Background:

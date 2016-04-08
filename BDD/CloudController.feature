@@ -1,4 +1,4 @@
-@Component-User_Role_Tests-CloudFoundry-CloudController
+@Verify-User_Role_Tests-CloudController
 Feature: Cloud Controller Features
 
   Scenario Outline: Creating Organizations
@@ -172,7 +172,7 @@ Feature: Cloud Controller Features
      | a space auditor  |  exists         |
 
 
-  @Component-Audit_Log_Tests-CloudFoundry-CloudController
+  @Verify-Audit_Log_Tests-CloudController
   Scenario Outline: Viewing Audits
      Given I am using <account> account
        when I view my audit logs
@@ -188,7 +188,7 @@ Feature: Cloud Controller Features
      | a space auditor  |  27     |
 
 
-  @Component-Log_Content_Test-CloudFoundry-CloudController
+  @Verify-Log_Content_Test-CloudController
   Scenario: Logs have timestamp, types of event, actor, and actee
     Given I am using an admin account
       when I look at the audit logs

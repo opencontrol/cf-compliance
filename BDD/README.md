@@ -1,10 +1,12 @@
-## Cloud.gov Tests
-BBD style tests for verifying Cloud.gov's compliance with FedRAMP controls
+## Cloud Foundry BDD Verification Tests
+These BDD were designed to verify compliance security requirements. When the test suite is run, the opencontrol documentation in the directory above is updated accordingly.
 
 ## Usage
 
 #### Install Dependencies  
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 Store the org, space, app, and app route in `ASG_ORG`, `ASG_SPACE`, `ASG_APP`, `ASG_APP_URL` to export as env variables.
 
@@ -56,36 +58,37 @@ export OPEN_GROUP="The name of the open security group"
 behave
 ```
 
+#### Creating new link tags
+In order to create a self documenting a link tag in the format below should be placed above a test scenario.
+`@Verify-Name_of_Test-Component_Key`
 
-### Self Documentation and Tagging components
-These BDD tests have the ability to self document in the [components documentation](https://github.com/18F/cg-compliance/tree/master/data/components).
-
-In order to create a self documenting a tag in the format below should be placed above a test scenario.
-`@Component-"Name of the test"-"System Key"-"Component_Key"`
-example:
+Example:
 ```
 Feature: Audit and Accountability
 
-@Component-LOG_TESTS-CloudFoundry-CloudController
+@Component-Log_Test-CloudController
 Scenario: Content of Audit Records
   Given I am using a master account
     when I look at the audit logs
     then audit logs have timestamp
-    And audit logs have type of event
-    And audit logs have actor
-    And audit logs have actee
 ```
+
 
 When the test scenario runs a new verification will appear in the component.
 example:
 ```yaml
 verifications:
-  LOG_TESTS:
+    key: Log_Test
     last_run: 2016-01-22 13:55:03.305097
-    name: Audit and Accountability Content of Audit Records
-    path: 'Feature: Audit and Accountability Scenario: Content of Audit Records'
+    name: Content of Audit Records
+    path: 'BDD/CloudController.feature'
+    description: |
+      Given I am using a master account
+      when I look at the audit logs
+      then audit logs have timestamp
     type: TEST
 ```
+
 
 These verification can be added to specific control to prove that the information system's control requirements are satisfied.
 ```yaml
@@ -98,5 +101,5 @@ satisfies:
       the CF API. A list the events is available in the API documentation.
       '
     references:
-    - verification: LOG_TESTS
+    - verification: Log_Test
 ```

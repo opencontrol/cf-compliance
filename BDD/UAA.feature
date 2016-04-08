@@ -1,4 +1,4 @@
-@Component-Account_Lockout_Tests-CloudFoundry-UAA
+@Verify-Account_Lockout_Tests-UAA
 Feature: CloudFoundry User Account and Authentication (UAA) Server Features
 
   Scenario: Accounts are not logged out after 3 failed attempts to login
