@@ -63,6 +63,7 @@ satisfies:
   - key: b
     text: |
       UAA centralizes all role assignment and all user management activity is logged and monitored.
+  standard_key: NIST-800-53
 - control_key: IA-2
   covered_by: []
   implementation_status: none
